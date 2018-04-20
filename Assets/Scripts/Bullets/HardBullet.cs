@@ -19,6 +19,7 @@ public class HardBullet : MonoBehaviour {
         if (other.tag.Equals("Enemy"))
         {
             other.GetComponent<Enemy>().GetDamage(hard.Damage);
+            Destroy(gameObject);
         }
         else if (!other.tag.Equals("Player"))
         {
